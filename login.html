@@ -16,7 +16,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 15% auto;
+            margin: 10% auto;
 
         }
 
@@ -49,21 +49,44 @@
             justify-content: center;
             margin: 10px auto;
 
+            & button {
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                width: 100%;
+                margin: 0 auto;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
         }
 
-        .button button {
-            padding: 12px 0px;
+        button {
+            background-color: #007BFF;
+            color: white;
             border: none;
+            padding: 10px 20px;
             border-radius: 5px;
-            background-color: #d5cfc8;
-            color: #000;
-            width: 50%;
+            width: 150px;
+            margin: 20px 5px;
             cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
+    <div>
+        <a href="index.html">
+            <button> Back</button>
+        </a>
+    </div>
     <div class="container">
         <form class="form">
             <h1>Welcome back</h1>
@@ -81,7 +104,7 @@
                 <button class="" type="submit">Login</button>
             </div>
         </form>
-        
+
     </div>
 </body>
 

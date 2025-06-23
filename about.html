@@ -4,14 +4,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About page</title>
+    <title>About Us</title>
+    <style>
+        body {
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 15px
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+            height: 80vh;
+        }
+
+        #container img {
+            width: 80%;
+            height: 70%;
+            border-radius: 10px;
+        }
+
+        .about-card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-data {
+            flex: 1;
+            padding: 20px;
+            & button{
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        }
+
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            
+        }
+    </style>
 </head>
 
 <body>
-    about page content goes here
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, vero officiis. Aspernatur quisquam voluptatem
-        consequuntur cumque temporibus aliquam voluptatibus quo quod cum! Rerum officia vel quisquam atque dolorem,
-        veniam debitis!</p>
+    <header>
+        <nav class="header">
+            <div>
+                <a href="index.html">
+                    <img src="https://th.bing.com/th/id/OIP.IDq8cZVcGfgwgkR1Bt0RywHaEo?w=232&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
+                        alt="" class="image">
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container" id="container">
+        <h1 id="heading"> About page content goes here</h1>
+        <div class="about-card">
+            <div class="about-data">
+                <h2>About Us</h2>
+                <p>We are a team of dedicated professionals committed to providing the best services to our clients.
+                    Our mission is to deliver high-quality solutions that meet the needs of our customers.</p>
+                <p>With years of experience in the industry, we pride ourselves on our expertise and customer
+                    satisfaction. Our team works tirelessly to ensure that every project is completed to the highest
+                    standards.</p>
+                <p>Thank you for visiting our website. We look forward to working with you!</p>
+                <a href="contact.html">
+                    <button >Contact Us</button>
+                </a>
+
+            </div>
+            <div class="about-image">
+                <img src="https://th.bing.com/th/id/OIP.IDq8cZVcGfgwgkR1Bt0RywHaEo?w=232&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm="
+                    alt="">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+            <p>Follow us on social media:
+                <a href="#">Facebook</a> |
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+        <div>
+            <p>Contact us at: <a href="mailto:arvind@gmail.com">email us</a></p>
+            <p>Privacy Policy | Terms of Service</p>
+        </p>
+        <p>Last updated: October 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>
