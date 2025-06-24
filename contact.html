@@ -94,8 +94,8 @@
             }
         }
 
-       
-    
+
+
 
         footer {
             background-color: #000;
@@ -130,9 +130,12 @@
             </ul>
         </nav>
     </header>
+
+
     <main class="container" id="container">
         <h1 id="heading"> Contact here</h1>
         <form>
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -142,10 +145,13 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit">Submit</button>
         </form>
 
     </main>
+    <div id="Data">
+
+    </div>
     <footer>
         <div>
             <p>&copy; 2023 Your Company Name. All rights reserved.</p>
@@ -162,6 +168,47 @@
             <p>Last updated: October 2023</p>
         </div>
     </footer>
+
+
+
+    <script>
+        let btn = document.getElementById("submit");
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let message = document.getElementById("message");
+
+        btn.addEventListener("click", (event) => {
+            event.preventDefault();
+            if (name.value && email.value && message.value) {
+                // console.log("entering data");
+                let data = document.getElementById("Data");
+
+                // data.innerHTML = `Welcome <h2>${name.value}</h2> your eamil is <h2>${email.value}</h2>  and your message is <h2>${message.value}</h2>`;
+                let spanForName = document.createElement("h2");
+                spanForName.innerHTML = name.value;
+                spanForName.style.color = "green";
+                let spanForEmail = document.createElement("h2");
+                spanForEmail.innerHTML = email.value;
+                spanForEmail.style.color = "blue";
+                let spanForMessage = document.createElement("h2");
+                spanForMessage.innerHTML = message.value;
+                spanForMessage.style.color = "red";
+
+                data.appendChild(spanForName);
+                data.appendChild(spanForEmail);
+                data.appendChild(spanForMessage);
+
+                name.value = "";
+                email.value = ""
+                message.value = "";
+
+            } else {
+                alert("Please fill all the fields");
+            }
+        });
+
+
+    </script>
 </body>
 
 </html>
